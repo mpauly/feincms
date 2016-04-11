@@ -1,11 +1,10 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.views import generic
 
 from feincms.module.blog.models import Entry
 
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(
         r'^(?P<pk>\d+)/',
         generic.DetailView.as_view(
@@ -20,4 +19,4 @@ urlpatterns = patterns(
         ),
         name='blog_entry_list'
     ),
-)
+]
